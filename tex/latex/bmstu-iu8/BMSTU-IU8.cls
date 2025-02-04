@@ -12,8 +12,8 @@
 \DeclareOption{research}{
     \def\termsAndDefinitionsLine{В настоящем отчете о НИР
     применяют следующие термины с соответствующими определениями:}
-    \def\abbreviationsLine{В настоящем отчете о НИР
-    применяют следующие сокращения и обозначения:}
+    \def\abbreviationsLine{В отчете
+    применяются следующие сокращения и обозначения:}
     \def\fillTitle{\fillResearchTitle}
 }
 \DeclareOption{ordinary}{
