@@ -5,15 +5,15 @@
 \LoadClass{article}
 
 \DeclareOption{diploma}{
-    \def\termsAndDefinitionsLine{В настоящей ВКР применяют следующие термины с соответствующими определениями:}
-    \def\abbreviationsLine{В настоящей ВКР применяют следующие сокращения и обозначения:}
+    \def\termsAndDefinitionsLine{}
+    \def\abbreviationsLine{В настоящем отчете по практике применяются следующие сокращения и обозначения:}
     \def\fillTitle{\fillDiplomaTitle}
 }
 \DeclareOption{research}{
     \def\termsAndDefinitionsLine{В настоящем отчете о НИР
     применяют следующие термины с соответствующими определениями:}
-    \def\abbreviationsLine{В настоящем отчете о НИР
-    применяют следующие сокращения и обозначения:}
+    \def\abbreviationsLine{В отчете
+    применяются следующие сокращения и обозначения:}
     \def\fillTitle{\fillResearchTitle}
 }
 \DeclareOption{ordinary}{

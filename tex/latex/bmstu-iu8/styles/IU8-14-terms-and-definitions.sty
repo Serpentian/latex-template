@@ -3,9 +3,9 @@
 \ProvidesPackage{IU8-14-terms-and-definitions}[2025/06/10 v1.8 Содержание]
 
 \RequirePackage[
-    acronym, 
-    automake, 
-    nopostdot, 
+    acronym,
+    automake,
+    nopostdot,
     xindy={glsnumbers=false, language=russian},
 ]{glossaries}
 \RequirePackage[abbreviations]{glossaries-extra}
@@ -16,18 +16,18 @@
 
 \newglossarystyle{terms}{
     \renewenvironment{theglossary}{}{}
-    \renewcommand*{\glossentry}[2]{  
+    \renewcommand*{\glossentry}[2]{
         \noindent\glstarget{##1}{\glossentryname{##1}}~\textemdash~\glossentrydesc{##1}
-        \newline
-    } 
-    \renewcommand*{\glsgroupskip}{}%  
+        \newline \newline
+    }
+    \renewcommand*{\glsgroupskip}{}%
 }
 
 \newcommand{\termsanddefenitions}{
     \structure{ТЕРМИНЫ~И~ОПРЕДЕЛЕНИЯ}
 
     \termsAndDefinitionsLine
-    
+
     \printunsrtglossary[
         style=terms,
         nonumberlist

@@ -9,12 +9,24 @@
 \renewcommand{\glossarysection}[2][]{}
 
 \newglossarystyle{definitions}{
-    \renewenvironment{theglossary}{}{}
-    \renewcommand*{\glossentry}[2]{  
-        \noindent\glstarget{##1}{\glossentryname{##1}}~\textemdash~\glossentrydesc{##1}
-        \newline
-    } 
-    \renewcommand*{\glsgroupskip}{}
+    % longtable with three columns:
+    \renewenvironment{theglossary}%
+    {\begin{longtable}{p{0.3\textwidth}p{0.05\textwidth}p{0.56\textwidth}}}%
+    {\end{longtable}}%
+    % no header:
+    \renewcommand*{\glossaryheader}{}%
+    % no group headings:
+    \renewcommand*{\glsgroupheading}[1]{}%
+    % main (level 0) entries displayed in a row
+    \renewcommand{\glossentry}[2]{%
+        \glstarget{##1}{\glossentryname{##1}} &
+        \textemdash &
+        \glossentrydesc{##1}
+        \tabularnewline
+    }%
+    % sub-entries (same as main)
+    \renewcommand{\subglossentry}[3]{\glossentry{##2}{##3}}%
+    \renewcommand*{\glsgroupskip}{}%
 }
 
 \newcommand{\listofabbreviations}{
